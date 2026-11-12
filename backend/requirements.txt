@@ -1,0 +1,5 @@
+# Backend-specific requirements (installed in backend container)
+# These are already in the main requirements.txt
+
+# For local backend development:
+# pip install -r ../requirements.txt

@@ -1,0 +1,13 @@
+﻿Feature,Type,Description,Values,Business_Meaning,Encoding_Strategy
+id,Integer,Unique customer identifier,3-381105,Primary key - no predictive value,Drop
+Gender,Categorical,Customer gender,Male/Female,Demographic segmentation,Binary (0/1)
+Age,Integer,Customer age in years,20-85,Risk profile indicator,StandardScaler
+Driving_License,Binary,Valid driving license,0/1,Eligibility indicator (99.8% have),None
+Region_Code,Categorical (numeric),Geographic region code,52 unique codes,Regional risk/behavior patterns,Target Encoding
+Previously_Insured,Binary,Previous vehicle insurance,0/1,Prior experience with vehicle insurance,None
+Vehicle_Age,Ordinal Categorical,Age of customer vehicle,< 1 Year / 1-2 Year / > 2 Years,Vehicle risk profile,Ordinal (0/1/2)
+Vehicle_Damage,Binary,History of vehicle damage,No/Yes,Claims history proxy,Binary (0/1)
+Annual_Premium,Continuous,Annual premium paid (health),2630-540165,Customer value/loyalty indicator,Log Transform + RobustScaler
+Policy_Sales_Channel,Categorical (numeric),Sales channel code,126 unique codes,Acquisition channel behavior,Target Encoding
+Vintage,Integer,Days as customer,10-299,Customer tenure/loyalty,StandardScaler
+Response,Binary (TARGET),Purchased vehicle insurance,0/1,Prediction target,None
